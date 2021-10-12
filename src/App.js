@@ -9,10 +9,10 @@ import img4 from "./img/4.png";
 const App = () => {
   return (
     <div className={classes.wrapper}>
-      <RadioInfo img={img1} />
-      <RadioInfo img={img2} />
-      <RadioInfo img={img3} />
-      <RadioInfo img={img4} />
+      <RadioInfo items={{ icon: img1 }} />
+      <RadioInfo items={{ icon: img2 }} />
+      <RadioInfo items={{ icon: img3 }} />
+      <RadioInfo items={{ icon: img4 }} />
     </div>
   );
 };
