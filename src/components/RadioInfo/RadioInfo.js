@@ -12,9 +12,9 @@ const RadioInfo = (props) => {
         className={classes.img}
       />
       <div className={classes.signWrap1}>
-        <a href="#" className={classes.sign_word}>
-          <p>название станции</p>
-        </a>
+        <button href="#" className={classes.sign_word}>
+          название станции{" "}
+        </button>
       </div>
     </div>
   );
