@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./RadioInfo.module.css";
+import { Link } from "react-router-dom";
 
 const RadioInfo = (props) => {
   return (
@@ -13,7 +14,7 @@ const RadioInfo = (props) => {
       />
       <div className={classes.signWrap1}>
         <button href="#" className={classes.sign_word}>
-          название станции{" "}
+          <Link to="/RadioPage">Название станции</Link>
         </button>
       </div>
     </div>

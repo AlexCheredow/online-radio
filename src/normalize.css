@@ -22,7 +22,8 @@ html {
 body {
   margin: 0;
   background-color: #000;
-  background: url("./img/bgSite.jpg") no-repeat center center fixed;
+  background: url(./img/bgSite.jpg) no-repeat center center fixed;
+  background-size: cover;
 
 }
 
