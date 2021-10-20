@@ -12,22 +12,25 @@ function Response() {
   });
 
   useEffect(() => {
-    axios
-      .get(
-        `https://api.allorigins.win/get?url=${encodeURIComponent(
-          "https://www.radiorecord.ru/api/stations/now/"
-        )}`
-      )
-      .then((res) => {
-        const result = JSON.parse(res.data.contents);
-        const radioLink = result.result[71].track;
+    const intervalId = setInterval(() => {
+      axios
+        .get(
+          `https://api.allorigins.win/get?url=${encodeURIComponent(
+            "https://www.radiorecord.ru/api/stations/now/"
+          )}`
+        )
+        .then((res) => {
+          const result = JSON.parse(res.data.contents);
+          const radioLink = result.result[71].track;
 
-        const artist = radioLink.artist;
-        const song = radioLink.song;
-        setRadioPage({ isLoaded: true, artist, song });
+          const artist = radioLink.artist;
+          const song = radioLink.song;
+          setRadioPage({ isLoaded: true, artist, song });
 
-        console.log(result);
-      });
+          console.log(result);
+        });
+    }, 1000 * 5);
+    return () => clearInterval(intervalId);
   }, [setRadioPage]);
   return (
     <div className={classes.signWrap1}>
