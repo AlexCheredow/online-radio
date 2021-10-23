@@ -1,0 +1,11 @@
+.BackButton {
+  background-image: url("../../img/backButton.png");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  height: 50px;
+  width: 50px;
+}
+
+.alignButton {
+  align-self: baseline;
+}
