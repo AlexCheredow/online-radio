@@ -5,7 +5,7 @@ import ReactHlsPlayer from "react-hls-player";
 const RadioPlayer = (props) => {
   return (
     <ReactHlsPlayer
-      src="https://hls-01-radiorecord.hostingradio.ru/record/playlist.m3u8"
+      src={props.link}
       autoPlay={true}
       controls={true}
       width="100%"

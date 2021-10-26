@@ -6,7 +6,7 @@
   height: 100%;
   width: auto;
   margin: 0 20px;
-  flex-grow: 1;
+  flex: 1 1 0px;
   position: relative;
 }
 
