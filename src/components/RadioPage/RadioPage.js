@@ -5,8 +5,11 @@ import Response from "./Response";
 import BackButton from "../BackButton/BackButton";
 
 const RadioPage = (props) => {
-  const props1 = props.location.propsSearch.props.arrayNumber;
-  const props2 = props.location.propsSearch.props.radioLink;
+  // const props1 = props.location.propsSearch.props.arrayNumber;
+  // const props2 = props.location.propsSearch.props.radioLink;
+  const props1 = 1;
+  const props2 = 2;
+  console.log(props);
   return (
     <div className={classes.height}>
       <BackButton />

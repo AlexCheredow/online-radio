@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./RadioInfo.module.css";
 import { Link } from "react-router-dom";
 
-const RadioInfo = ({ cover, link }) => {
+const RadioInfo = ({ cover, link, radioName }) => {
   return (
     <div className={classes.bg}>
       <img
@@ -14,9 +14,7 @@ const RadioInfo = ({ cover, link }) => {
       />
       <div className={classes.signWrap1}>
         <button href="#" className={classes.sign_word}>
-          <Link to={{ pathname: "/RadioPage" + link}}>
-            {props.radioName}{" "}
-          </Link>
+          <Link to={{ pathname: `/RadioPage${link}` }}>{radioName}</Link>
         </button>
       </div>
     </div>

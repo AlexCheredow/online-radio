@@ -13,7 +13,9 @@ ReactDOM.render(
         <Route exact path="/">
           <App />
         </Route>
-        <Route path="/RadioPage" component={RadioPage} />
+        <Route path="/RadioPage">
+          <RadioPage />
+        </Route>
       </Switch>
     </Router>
   </React.StrictMode>,
