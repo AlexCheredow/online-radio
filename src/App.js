@@ -7,9 +7,7 @@ import img3 from "./img/3.png";
 import img4 from "./img/4.png";
 import RADIOPROPS from "./lib/radioProps";
 
-const App = ({ arrayNumber }) => {
-  console.log(RADIOPROPS);
-
+const App = () => {
   return (
     <div className={classes.wrapper}>
       <RadioInfo
@@ -26,8 +24,20 @@ const App = ({ arrayNumber }) => {
         radioLink={RADIOPROPS[1].radioLink}
         link={RADIOPROPS[1].link}
       />
-      <RadioInfo cover={img3} radioName="другое радио" />
-      <RadioInfo cover={img4} radioName="другое радио" />
+      <RadioInfo
+        cover={img3}
+        radioName={RADIOPROPS[2].radioName}
+        arrayNumber={RADIOPROPS[2].arrayNumber}
+        radioLink={RADIOPROPS[2].radioLink}
+        link={RADIOPROPS[2].link}
+      />
+      <RadioInfo
+        cover={img4}
+        radioName={RADIOPROPS[3].radioName}
+        arrayNumber={RADIOPROPS[3].arrayNumber}
+        radioLink={RADIOPROPS[3].radioLink}
+        link={RADIOPROPS[3].link}
+      />
     </div>
   );
 };

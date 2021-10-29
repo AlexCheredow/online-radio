@@ -3,14 +3,13 @@ import axios from "axios";
 
 import classes from "./RadioPage.module.css";
 
-function Response(props) {
+function Response(arrayNumber) {
   const [radioPage, setRadioPage] = useState({
     error: null,
     isLoaded: false,
     artist: null,
     song: null,
   });
-  const props1 = props.arrayNumber;
   useEffect(() => {
     const intervalId = setInterval(() => {
       axios
@@ -21,15 +20,14 @@ function Response(props) {
         )
         .then((res) => {
           const result = JSON.parse(res.data.contents);
-          const radioLink = result.result[props1].track;
-          console.log(result.result);
+          const radioLink = result.result[arrayNumber.arrayNumber].track;
           const artist = radioLink.artist;
           const song = radioLink.song;
           setRadioPage({ isLoaded: true, artist, song });
         });
     }, 1000 * 5);
     return () => clearInterval(intervalId);
-  }, [setRadioPage, props1]);
+  }, [setRadioPage, arrayNumber]);
   // return (
   //   <div className={classes.signWrap1}>
   //     <div className={classes.sign_word}>artist name: {radioPage.artist}</div>

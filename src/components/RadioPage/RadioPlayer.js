@@ -2,10 +2,10 @@ import React from "react";
 import ReactHlsPlayer from "react-hls-player";
 // import classes from "./RadioPage.module.css";
 
-const RadioPlayer = (props) => {
+const RadioPlayer = (radioLink) => {
   return (
     <ReactHlsPlayer
-      src={props.link}
+      src={radioLink.radioLink}
       autoPlay={true}
       controls={true}
       width="100%"

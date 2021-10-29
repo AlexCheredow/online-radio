@@ -3,20 +3,18 @@ import classes from "./RadioPage.module.css";
 import RadioPlayer from "./RadioPlayer";
 import Response from "./Response";
 import BackButton from "../BackButton/BackButton";
+import { useLocation } from "react-router-dom";
 
-const RadioPage = (props) => {
-  // const props1 = props.location.propsSearch.props.arrayNumber;
-  // const props2 = props.location.propsSearch.props.radioLink;
-  const props1 = 1;
-  const props2 = 2;
-  console.log(props);
+const RadioPage = () => {
+  let location = useLocation();
+
   return (
     <div className={classes.height}>
       <BackButton />
       <div className={classes.flexBox}>
         <div className={classes.wrapper}>
-          <RadioPlayer link={props2} />
-          <Response arrayNumber={props1} />
+          <RadioPlayer radioLink={location.state[1]} />
+          <Response arrayNumber={location.state[0]} />
         </div>
       </div>
     </div>
