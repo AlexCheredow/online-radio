@@ -20,28 +20,32 @@ a {
   width: 100%;
   padding: 15%;
   font-size: 18px;
-  color: #fff;
+  color: rgb(58 188 228);
+  ;
+  transition: color .5s ease-out;
   text-decoration: none;
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
-  animation: RadioPage_neon-1__YkWkQ 0.1s ease-in-out infinite alternate;
+  animation: neon-1 0.1s ease-in-out infinite alternate;
 }
 
 a:hover {
-  color: blue;
-  transition: 0.3s ease-out;
+  color: rgb(0 122 178 / 92%);
+  ;
+  animation: neon-1 0.1s ease-in-out infinite alternate;
 }
 
 .signWrap1 {
   width: -webkit-fill-available;
-  background: #337AB7;
+  background: #287fb2;
   position: relative;
   color: rgb(177 25 181);
-  box-shadow: 0px 0px 14px #003aff;
+  box-shadow: 0px 0px 14px #17377a;
+  ;
   margin: 15px;
   text-decoration: none;
   text-align: center;
-  background-color: #002fce5e;
+  background-color: #10347296;
 }
 
 .signWrap1 .sign_word {
@@ -53,7 +57,7 @@ a:hover {
   justify-content: center;
   border: 0;
   font-size: 18px;
-  color: #FFF;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
@@ -62,10 +66,10 @@ a:hover {
 
 @keyframes neon-1 {
   from {
-    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(191, 226, 255, 0.52), 0 0 21px rgba(191, 226, 255, 0.92), 0 0 34px rgba(191, 226, 255, 0.78), 0 0 54px rgba(191, 226, 255, 0.92);
+    text-shadow: 0 0 6px rgba(96, 205, 255, 0.92), 0 0 30px rgba(0, 149, 218, 0.92);
   }
 
   to {
-    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(191, 226, 255, 0.58), 0 0 22px rgba(191, 226, 255, 0.84), 0 0 38px rgba(191, 226, 255, 0.88), 0 0 60px #FFF;
+    text-shadow: 0 0 6px rgba(0, 149, 218, 0.92), 0 0 30px rgba(96, 205, 255, 0.92);
   }
 }
